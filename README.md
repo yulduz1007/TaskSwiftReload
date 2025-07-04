@@ -17,10 +17,13 @@ git clone https://github.com/yulduz1007/TaskSwiftReload.git
 pip install -r requirements.txt
 
 # Step 3: Migrate the changes and create database tables in terminal
-make mig
+make mig or python manage.py makemigration
+            python manage.py migrate
 
+"!!if python did not work use python3!!"
 #step 4: Create admin from terminal
 python manage.py createsuperuser
+admin panel: http://127.0.0.1:8001/admin only works when you run the project
 
 #step 5: Run the project and test it
 python manage.py runserver
